@@ -24,7 +24,7 @@
                 <div class="flex">
                     <div class="flex-shrink-0 flex items-center">
                         <a href="{{ route('home') }}" class="text-primary-600 font-bold text-xl">
-                            ShopName
+                            Sallu's Shop
                         </a>
                     </div>
                     <nav class="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -78,8 +78,15 @@
                     </a>
 
                     @guest
-                        <a href="{{ route('login') }}" class="ml-4 text-sm text-gray-700 underline">Login</a>
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        <a href="{{ route('login') }}"
+                            class="ml-4 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700 transition duration-200">
+                            Login
+                        </a>
+
+                        <a href="{{ route('register') }}"
+                            class="ml-4 px-4 py-2 bg-green-600 text-white text-sm font-medium rounded hover:bg-green-700 transition duration-200">
+                            Register
+                        </a>
                     @else
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
