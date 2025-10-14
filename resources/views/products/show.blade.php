@@ -140,7 +140,7 @@
                     @foreach($relatedProducts as $relatedProduct)
                         <div class="product-card">
                             <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg">
-                                <img src="{{ $relatedProduct->image ?? 'https://via.placeholder.com/300' }}" alt="{{ $relatedProduct->name }}" class="h-64 w-full object-cover">
+                                <img src="{{ $relatedProduct->image ?? 'https://via.placeholder.com/300' }}" alt="{{ $relatedProduct->name }}" class="w-full h-full object-cover">
                             </div>
                             <div class="p-4">
                                 <h3 class="text-lg font-medium text-gray-900">
