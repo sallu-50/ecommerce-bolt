@@ -4,32 +4,10 @@ use Illuminate\Support\Str;
 
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Default Cache Store
-    |--------------------------------------------------------------------------
-    |
-    | This option controls the default cache store that will be used by the
-    | framework. This connection is utilized if another isn't explicitly
-    | specified when running a cache operation inside the application.
-    |
-    */
 
-    'default' => env('CACHE_STORE', 'database'),
+ 'default' => env('CACHE_DRIVER', 'file'),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Cache Stores
-    |--------------------------------------------------------------------------
-    |
-    | Here you may define all of the cache "stores" for your application as
-    | well as their drivers. You may even define multiple stores for the
-    | same cache driver to group types of items stored in your caches.
-    |
-    | Supported drivers: "array", "database", "file", "memcached",
-    |                    "redis", "dynamodb", "octane", "null"
-    |
-    */
+   
 
     'stores' => [
 
@@ -40,7 +18,7 @@ return [
 
         'database' => [
             'driver' => 'database',
-            'connection' => 'sqlite',
+           'connection' => env('DB_CONNECTION', 'mysql'), 
             'table' => env('DB_CACHE_TABLE', 'cache'),
             'lock_connection' => env('DB_CACHE_LOCK_CONNECTION'),
             'lock_table' => env('DB_CACHE_LOCK_TABLE'),
